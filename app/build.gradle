@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.welf.oftest"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            //prod values
+            buildConfigField("String", "foursquare_client_id", "\"4TYAOUV5DXJ1UAZTEXZK0LPO2JVBTJJQY5WIJZCWK1UGHMLL\"")
+            buildConfigField("String", "foursquare_client_secret", "\"ZTHDBO4TI1UOYE0MENHOJJCMDNQH5IKWRHHAPO1QENG5DJLT\"")
+            buildConfigField("String", "foursquare_baseURL", "\"https://api.foursquare.com/v2/\"")
+
+            buildConfigField("String", "locationIQ_geocode_api", "\"44298f063a37c2\"")
+            buildConfigField("String", "locationIQ_baseURL", "\"https://us1.locationiq.com/v1/\"")
+        }
+        debug {
+            //tests values
+            buildConfigField("String", "foursquare_client_id", "\"4TYAOUV5DXJ1UAZTEXZK0LPO2JVBTJJQY5WIJZCWK1UGHMLL\"")
+            buildConfigField("String", "foursquare_client_secret", "\"ZTHDBO4TI1UOYE0MENHOJJCMDNQH5IKWRHHAPO1QENG5DJLT\"")
+            buildConfigField("String", "foursquare_baseURL", "\"https://api.foursquare.com/v2/\"")
+
+            buildConfigField("String", "locationIQ_geocode_api", "\"44298f063a37c2\"")
+            buildConfigField("String", "locationIQ_baseURL", "\"https://us1.locationiq.com/v1/\"")
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //rest
+    implementation "com.squareup.okhttp3:okhttp:4.2.1"
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+
+    //Json lib
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    //Rx
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.14'
+
+    //android annotations
+    annotationProcessor "org.androidannotations:androidannotations:4.6.0"
+    implementation "org.androidannotations:androidannotations-api:4.6.0"
+
+    //design
+    implementation 'com.google.android.material:material:1.0.0'
+
+}

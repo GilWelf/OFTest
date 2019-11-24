@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--  Splash screen background  -->
+    <style name="SplashScreenTheme" parent="AppTheme">
+
+        <item name="android:windowBackground">@drawable/splashscreen</item>
+        <item name="android:screenOrientation">portrait</item>
+
+    </style>
+
+    <!--  Activity base theme  -->
+    <style name="ActivityTheme" parent="AppTheme">
+
+        <item name="android:windowBackground">@drawable/common_background_gradient_splashscreen</item>
+
+    </style>
+
+    <!--  TextInputLayout theme  -->
+    <style name="TextInputLayoutTheme" parent="Base.Widget.MaterialComponents.TextInputLayout">
+
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:textColorHint">@color/colorPrimary</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <item name="android:imeOptions">actionDone|flagNoExtractUi</item>
+
+    </style>
+
+</resources>

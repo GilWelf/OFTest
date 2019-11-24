@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">OFTest</string>
+
+    <!--  Main Activity texts  -->
+    <string name="main_activity_address_hint">Please entrer an address</string>
+    <string name="main_activity_text_button">Search</string>
+
+
+    <!--  Exceptions messages  -->
+    <string name="common_error">Error</string>
+    <string name="timeout_exception_title">Timeout Exception</string>
+    <string name="timeout_exception_message">A timeout exception occur ! Please try again.</string>
+    <string name="unknown_host_exception_message">Please check your internet connection and try again !</string>
+    <string name="precision_exception_message">Could you specify your request ?</string>
+    <string name="geocode_exception_message">This address doesn\'t exists !</string>
+    <string name="server_error">Internal server error</string>
+    <string name="latlon_pattern">%d,%d</string>
+</resources>
